@@ -73,3 +73,6 @@ pip install flasgger
 			Press-> Try it out
 			If we press that we get input window to upload file-->Upload local file TestFile.csv  --> Execute
 			We get message in "Response body" as "[0, 0, 0, 0, 1, 1, 1, 1, 1]"
+
+### Docker container:
+		Above we built Flasgger used api.py. Now we are building docker container to deploy this in different environment in few steps
