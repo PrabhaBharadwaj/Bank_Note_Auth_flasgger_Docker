@@ -26,3 +26,50 @@ Swagger is api thing, it will automatically generates front end . We need to fol
 
 Install flasgger 
 pip install flasgger
+
+
+### 1) app.py
+	
+	--> Inside this some commented part are very important related to swagger. so we need to follow properly as same.
+	-->All indentation we should follow properly, else swagger page wont opens properly
+
+		    """Let's Authenticate the Banks Note 
+		    This is using docstrings for specifications.
+		    ---
+		    parameters:
+		      - name: file
+		        in: formData
+ 		       	type: file
+ 		       	required: true
+      
+		    responses:
+		        200:
+   		         description: The output values
+ 		       
+  		  """
+
+	here 'in' is fromdata, query(Input value) etc
+		'name' is 'Columnname'
+		'type' is which type like number,float, string,file etc
+		'required' is weather column value is compulsary or not
+
+### 2) Run this app.py in spider or cmd project specific env
+
+	--> We get link http://127.0.0.1:5000/  once we run there, we get below message
+				Welcome All
+
+	--> just copy that link and append /apidocs/ and paste in Chrome
+			http://127.0.0.1:5000/apidocs/
+		We will get the Swagger API page with all our function written in app.py
+		
+	--> We get 2 tab:
+	#####	1) GET ​/predict Let's Authenticate the Banks Note
+			Press-> Try it out
+			If we press that we get input window to pass 4 variable values  --> Execute
+			We get message in "Response body" as "Hello The answer is[0]"
+
+
+	#####	2) POST ​/predict_file Let's Authenticate the Banks Note
+			Press-> Try it out
+			If we press that we get input window to upload file-->Upload local file TestFile.csv  --> Execute
+			We get message in "Response body" as "[0, 0, 0, 0, 1, 1, 1, 1, 1]"
